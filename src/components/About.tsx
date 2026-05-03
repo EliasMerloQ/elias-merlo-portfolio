@@ -5,6 +5,7 @@ import {
   SiNodedotjs, SiExpress, SiNestjs, SiPython, SiDjango,
   SiMongodb, SiPostgresql, SiMysql, SiFirebase, SiRedis, SiSupabase,
   SiFigma, SiGit, SiDocker, SiJest, SiWebpack, SiAstro, SiGithub,SiGitlab, SiKubernetes,
+  SiMariadb,
 } from 'react-icons/si';
 import { LiaJava } from 'react-icons/lia';
 
@@ -21,7 +22,6 @@ const About: React.FC = () => {
         {name: 'Astro', icon: <SiAstro className="w-4 h-4" /> },
         { name: 'Tailwind CSS', icon: <SiTailwindcss className="w-4 h-4" /> },
         { name: 'Redux', icon: <SiRedux className="w-4 h-4" /> },
-        { name: 'HTML/CSS', icon: <SiHtml5 className="w-4 h-4" /> }
       ]
     },
     {
@@ -41,9 +41,10 @@ const About: React.FC = () => {
       category: 'Database',
       icon: <Database className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />,
       technologies: [
-        { name: 'MongoDB', icon: <SiMongodb className="w-4 h-4" /> },
-        { name: 'PostgreSQL', icon: <SiPostgresql className="w-4 h-4" /> },
         { name: 'MySQL', icon: <SiMysql className="w-4 h-4" /> },
+        { name: 'mariaDB', icon: <SiMariadb className="w-4 h-4" /> },
+        { name: 'PostgreSQL', icon: <SiPostgresql className="w-4 h-4" /> },
+        { name: 'MongoDB', icon: <SiMongodb className="w-4 h-4" /> },
         { name: 'Firebase', icon: <SiFirebase className="w-4 h-4" /> },
         { name: 'Redis', icon: <SiRedis className="w-4 h-4" /> },
         { name: 'Supabase', icon: <SiSupabase className="w-4 h-4" /> }
@@ -53,6 +54,7 @@ const About: React.FC = () => {
       category: 'Design & Tools',
       icon: <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
       technologies: [
+        { name: 'HTML/CSS', icon: <SiHtml5 className="w-4 h-4" /> },
         { name: 'Figma', icon: <SiFigma className="w-4 h-4" /> },
         { name: 'Git', icon: <SiGit className="w-4 h-4" /> },
         { name: 'Github', icon: <SiGithub className="w-4 h-4" /> },
@@ -145,42 +147,42 @@ const About: React.FC = () => {
               ))}
             </div>
             
-            <div className="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
-              <div className="flex items-start">
-                <Globe className="w-6 h-6 text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0" />
-                <div className="ml-3">
+            <div className="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-3xl border border-blue-100 dark:border-blue-800 shadow-sm">
+              <div className="flex items-center gap-3">
+                <Globe className="w-7 h-7 text-blue-600 dark:text-blue-300" />
+                <div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                     Languages
                   </h3>
-                  <div className="mt-2 space-y-2">
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm text-gray-700 dark:text-gray-300">English</span>
-                        <span className="text-sm text-gray-600 dark:text-gray-400">Native</span>
-                      </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div className="bg-blue-600 dark:bg-blue-400 h-2 rounded-full" style={{ width: '100%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm text-gray-700 dark:text-gray-300">Spanish</span>
-                        <span className="text-sm text-gray-600 dark:text-gray-400">Fluent</span>
-                      </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div className="bg-blue-600 dark:bg-blue-400 h-2 rounded-full" style={{ width: '90%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm text-gray-700 dark:text-gray-300">French</span>
-                        <span className="text-sm text-gray-600 dark:text-gray-400">Basic</span>
-                      </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div className="bg-blue-600 dark:bg-blue-400 h-2 rounded-full" style={{ width: '40%' }}></div>
-                      </div>
-                    </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Communication skills and spoken levels
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-800 dark:text-gray-100">Español</span>
+                    <span className="rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200 px-3 py-1 text-xs font-semibold">
+                      Nativo
+                    </span>
                   </div>
+                  <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
+                    Professional and fluid use in all my projects.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 shadow-sm transition-transform duration-300 hover:-translate-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-800 dark:text-gray-100">Inglés</span>
+                    <span className="rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-200 px-3 py-1 text-xs font-semibold">
+                      B1
+                    </span>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
+                    Able to communicate well in technical and work environments.
+                  </p>
                 </div>
               </div>
             </div>
